@@ -1,0 +1,31 @@
+Measures:
+
+i.	Allocation Amount = [TotalProcessingFee] + [TotalBaseFee] + [SubscriptionFeeAmount]
+ii.	Loc Allocation Amount = [LocProcSum] + [LocBaseSum] + [SubscriptionFeeAmount]
+iii.	Loc Base Fee Portion = (SELECTEDVALUE(BUCCPivotTable[Location Count]) / SELECTEDVALUE(InvoiceTable[Inv Processing Qty])) * SELECTEDVALUE(InvoiceTable[AmountBaseFee])
+iv.	Loc Processing Fee Portion = (SELECTEDVALUE(BUCCPivotTable[Location Count]) / SELECTEDVALUE(InvoiceTable[Inv Processing Qty])) * SELECTEDVALUE(InvoiceTable[AmountProcessingFee])
+v.	LocBaseSum = SUMX(InvoiceTable, COALESCE([Loc Base Fee Portion], 0))
+vi.	LocProcSum = SUMX(InvoiceTable, COALESCE([Loc Processing Fee Portion], 0))
+vii.	SubscriptionFeeAmount = IF(
+    NOT(CONTAINSSTRING(SELECTEDVALUE(InvoiceTable[Description]), "Base Fee")), 
+(COUNT(Sheet1[ClientId])/SELECTEDVALUE(InvoiceTable[Subscription Quantity])) * SELECTEDVALUE(InvoiceTable[Subscription Amount]), 0)
+viii.	TotalBaseFee = CALCULATE(
+SUM(InvoiceTable[Base Fee Portion]), ALLEXCEPT(InvoiceTable, InvoiceTable[Country]))
+ix.	TotalProcessingFee = CALCULATE(
+SUM(InvoiceTable[Processing Fee Portion]), ALLEXCEPT(InvoiceTable, InvoiceTable[Country]))
+
+Columns:
+
+i.	Allocation Amount = [TotalProcessingFee] + [TotalBaseFee] + [SubscriptionFeeAmount]
+ii.	Loc Allocation Amount = [LocProcSum] + [LocBaseSum] + [SubscriptionFeeAmount]
+iii.	Loc Base Fee Portion = (SELECTEDVALUE(BUCCPivotTable[Location Count]) / SELECTEDVALUE(InvoiceTable[Inv Processing Qty])) * SELECTEDVALUE(InvoiceTable[AmountBaseFee])
+iv.	Loc Processing Fee Portion = (SELECTEDVALUE(BUCCPivotTable[Location Count]) / SELECTEDVALUE(InvoiceTable[Inv Processing Qty])) * SELECTEDVALUE(InvoiceTable[AmountProcessingFee])
+v.	LocBaseSum = SUMX(InvoiceTable, COALESCE([Loc Base Fee Portion], 0))
+vi.	LocProcSum = SUMX(InvoiceTable, COALESCE([Loc Processing Fee Portion], 0))
+vii.	SubscriptionFeeAmount = IF(
+    NOT(CONTAINSSTRING(SELECTEDVALUE(InvoiceTable[Description]), "Base Fee")), 
+(COUNT(Sheet1[ClientId])/SELECTEDVALUE(InvoiceTable[Subscription Quantity])) * SELECTEDVALUE(InvoiceTable[Subscription Amount]), 0)
+viii.	TotalBaseFee = CALCULATE(
+SUM(InvoiceTable[Base Fee Portion]), ALLEXCEPT(InvoiceTable, InvoiceTable[Country]))
+ix.	TotalProcessingFee = CALCULATE(
+SUM(InvoiceTable[Processing Fee Portion]), ALLEXCEPT(InvoiceTable, InvoiceTable[Country]))
