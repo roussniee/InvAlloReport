@@ -1,7 +1,7 @@
 <h1>Invoice Allocation Report</h1>
 
 <!--
- ### [YouTube Demonstration](https://youtu.be/7eJexJVCqJo)
+ ### [YouTube Demonstration](link)
  -->
 
 <h2>Description</h2>
@@ -24,7 +24,7 @@ To streamline month-end invoicing, this automation extracts financial informatio
 - Designed a Power Automate flow to extract invoice line items using AI capabilities
 - Mapped invoice amounts to country entities using custom Excel logic
 - Automated 15+ months of data processing for multiple business regions
-- Built Power BI dashboards for visual breakdown of charges by country
+- Built Power BI reports and extracted data to Excel breakdowns of charges by country
 
 Improved accuracy and timeliness of journal entries for Accounts Payable
 
@@ -34,38 +34,15 @@ Improved accuracy and timeliness of journal entries for Accounts Payable
 - Reduced month-end invoice processing time
 - Supported financial transparency for over 15 countries
 
-<h2>Program walk-through/Visual aids:</h2>
-<i><b>Still building...</b></i>
-<!--
+<h2>Visual aids:</h2>
+<i><b>Power Automate Flow Using AI Builder for Invoice data extraction</b></i>
+
 <p align="center">
-Launch the utility: <br/>
-<img src="https://i.imgur.com/62TgaWL.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+Flow: <br/>
+<img src="https://imgur.com/FTzQ6Z1.png" height="70%" width="70%" alt="Disk Sanitization Steps"/>
 <br />
-<br />
-Select the disk:  <br/>
-<img src="https://i.imgur.com/tcTyMUE.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-<br />
-Enter the number of passes: <br/>
-<img src="https://i.imgur.com/nCIbXbg.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-<br />
-Confirm your selection:  <br/>
-<img src="https://i.imgur.com/cdFHBiU.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-<br />
-Wait for process to complete (may take some time):  <br/>
-<img src="https://i.imgur.com/JL945Ga.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-<br />
-Sanitization complete:  <br/>
-<img src="https://i.imgur.com/K71yaM2.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-<br />
-Observe the wiped disk:  <br/>
-<img src="https://i.imgur.com/AeZkvFQ.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
---!>
+
 
 <h3>Confidentiality Note</h3>
 <i>No sensitive invoice data is shown. All screenshots are recreated with mock data to preserve confidentiality.</i>
